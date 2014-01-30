@@ -17,8 +17,28 @@ import javax.swing.Spring.SumSpring;
 	}
  
 	
-	
-		println sumOfMultiples(100)
-	
+	def fibnoacciNumbers(n,closure)
+	{
+		BigInteger x = 1
+		 println 1
+		BigInteger  y = 2
+		BigInteger total = 0;
+	  	 1.upto(n)
+		  {
+			  z=y
+			  if(y%2==0)
+			  total += y
+			  println y
+			  y = closure(x, y)
+			  x=z
+			  
+		  }
+		  total
+	}
 
+//	fibnoacciNumbers(10){x,y ->  x+y }
+	println " sum is ${fibnoacciNumbers(10000){x,y ->  x+y }}";
+	
+	//	println sumOfMultiples(100)
+	
 
